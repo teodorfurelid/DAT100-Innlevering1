@@ -13,11 +13,8 @@ public class O2 {
 
             if (karakter < 0) {
                 System.out.println("Ugyldig poengsum (kan ikkje vere negativ).");
-                System.out.print("Skriv inn valid poeng: ");
-                karakter = in.nextInt();
             } else if (karakter > 100) {
                 System.out.println("Ugyldig poengsum (kan ikkje vere over 100).");
-                System.out.print("Skriv inn valid poeng: ");
             } else if (karakter > 89) {
                 System.out.println("Karakter: A");
             } else if (karakter > 79) {
