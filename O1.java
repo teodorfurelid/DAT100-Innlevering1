@@ -8,10 +8,10 @@ public class O1 {
         int lonn = in.nextInt();
 
         int t1 = 217400;
-        int t2 = 306050;
-        int t3 = 697150;
-        int t4 = 942400;
-        int t5 = 1410750;
+        int t2 = 306051;
+        int t3 = 697151;
+        int t4 = 942401;
+        int t5 = 1410751;
 
         double s_1 = 0.00;
         double s1 = 0.017;
@@ -27,13 +27,13 @@ public class O1 {
             System.out.print("Dinn skatt: " + (int)(lonn*s1));
         } else if (lonn < t3) {
             System.out.println("Trinn 2");
-            System.out.print("Dinn skatt: " + (int)(((t3-lonn)*s2)+(t1*s1)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t1)*s2)+(t1*s1)));
         }else if (lonn < t4) {
             System.out.println("Trinn 3");
-            System.out.print("Dinn skatt: " + (int)(((t4-lonn)*s3)+(t1*s1)+(t2*s2)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t2)*s3)+(t1*s1)+(t2*s2)));
         } else if (lonn < t5) {
             System.out.println("Trinn 4");
-            System.out.print("Dinn skatt: " + (int)(((t5-lonn)*s4)+(t1*s1)+(t2*s2)+(t3*s3)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t3)*s4)+(t1*s1)+(t2*s2)+(t3*s3)));
         } else {
             System.out.println("Trinn 5");
             System.out.print("Dinn skatt: " + (int)((lonn-t5)*(s5)+(t1*s1)+(t2*s2)+(t3*s3)+(t4*s4)));
