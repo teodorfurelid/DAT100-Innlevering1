@@ -1,35 +1,49 @@
 import java.util.Scanner;
 
-public class O1 {
+public class O1_2 {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        System.out.print("Kva er dinn lønn? ");
-
+        System.out.print("Kva er din lønn: ");
         int lonn = in.nextInt();
-        int skatt0 = 0;
-        double skatt1 = 0.017;
-        double skatt2 = 0.04;
-        double skatt3 = 0.137;
-        double skatt4 = 0.167;
-        double skatt5 = 0.177;
 
-        if (lonn <= 217400) {
-            System.out.print("Dinn trinnskatt er: " + skatt0);
-        } else if (lonn > 217400 && lonn < 306050) {
-            System.out.print("Dinn trinnskatt er: " + (skatt1*lonn) + "kr");
-        } else if (lonn > 306050 && lonn < 697150) {
-            System.out.print("Dinn trinnskatt er: " + (skatt2*lonn) + "kr");
-        } else if (lonn > 697150 && lonn < 942400) {
-            System.out.print("Dinn trinnskatt er: " + (skatt3*lonn) + "kr");
-        } else if (lonn > 942400 && lonn < 1410750) {
-            System.out.print("Din trinnskatt er: "  + (skatt4*lonn) + "kr");
-        } else if (lonn > 1410750) {
-            System.out.print("Din trinnskatt er: " + (skatt5*lonn) + "kr");
+        int t1 = 217400;
+        int t2 = 306050;
+        int t3 = 697150;
+        int t4 = 942400;
+        int t5 = 1410750;
+
+        double s_1 = 0.00;
+        double s1 = 0.017;
+        double s2 = 0.04;
+        double s3 = 0.137;
+        double s4 = 0.167;
+        double s5 = 0.177;
+
+        if (lonn < t1) {
+            System.out.println("Dinn skatt: " + (int)(lonn*s_1));
+        } else if (lonn < t2) {
+            System.out.println("Trinn 1");
+            System.out.print("Dinn skatt: " + (int)(lonn*s1));
+        } else if (lonn < t3) {
+            System.out.println("Trinn 2");
+            System.out.print("Dinn skatt: " + (int)(((t3-lonn)*s2)+(t1*s1)));
+        }else if (lonn < t4) {
+            System.out.println("Trinn 3");
+            System.out.print("Dinn skatt: " + (int)(((t4-lonn)*s3)+(t1*s1)+(t2*s2)));
+        } else if (lonn < t5) {
+            System.out.println("Trinn 4");
+            System.out.print("Dinn skatt: " + (int)(((t5-lonn)*s4)+(t1*s1)+(t2*s2)+(t3*s3)));
+        } else {
+            System.out.println("Trinn 5");
+            System.out.print("Dinn skatt: " + (int)((lonn-t5)*(s5)+(t1*s1)+(t2*s2)+(t3*s3)+(t4*s4)));
         }
+
+
 
 
         in.close();
     }
 }
+
 
