@@ -27,16 +27,19 @@ public class O1 {
             System.out.print("Dinn skatt: " + (int)(lonn*s1));
         } else if (lonn < t3) {
             System.out.println("Trinn 2");
-            System.out.print("Dinn skatt: " + (int)(((lonn-t1)*s2)+(t1*s1)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t2)*s2)+(t2*s1)));
+            //Tar lønn - 306 k og overskuddet blir skatta; deretter plusser vi på skatt fra forrige trinn.
         }else if (lonn < t4) {
             System.out.println("Trinn 3");
-            System.out.print("Dinn skatt: " + (int)(((lonn-t2)*s3)+(t1*s1)+(t2*s2)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t3)*s3)+(t2*s1)+(t3*s2)));
+            //Tar lønn - 697 k og overskuddet blir skatta; deretter plusser vi på skatt fra dei to forrige trinna
         } else if (lonn < t5) {
             System.out.println("Trinn 4");
-            System.out.print("Dinn skatt: " + (int)(((lonn-t3)*s4)+(t1*s1)+(t2*s2)+(t3*s3)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t4)*s4)+(t2*s1)+(t3*s2)+(t4*s3)));
+            //Tar lønn - 947 k og overskuddet blir skatta; deretter plusser vi på skatt fra dei tre forrige trinna
         } else {
             System.out.println("Trinn 5");
-            System.out.print("Dinn skatt: " + (int)((lonn-t5)*(s5)+(t1*s1)+(t2*s2)+(t3*s3)+(t4*s4)));
+            System.out.print("Dinn skatt: " + (int)(((lonn-t5)*s5)+(t2*s1)+(t3*s2)+(t4*s3)+(t5*s4)));
         }
 
 
