@@ -37,6 +37,6 @@ public class O2 {
         }
         in.close();
 
-        System.out.print("Laga av Teooo-Furrisssssss");
+        System.out.print("Laga av Teooo-Furriss");
     }
 }
