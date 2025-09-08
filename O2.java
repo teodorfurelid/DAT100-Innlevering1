@@ -12,10 +12,8 @@ public class O2 {
                 System.out.print("Karaktervurdering (" +  i + ") 0-100: " );
                 karakter = in.nextInt();
 
-                if (karakter < 0) {
-                    System.out.println("Ugyldig poengsum!! kan ikkje vere(negativ) -> Prøv igjen");
-                } else if (karakter > 100) {
-                    System.out.println("Ugyldig poengsum!!! kan ikkje vere >(100) -> Prøv igjen");
+                if (karakter < 0 || karakter > 100) {
+                    System.out.println("Ugyldig poengsum!! kan ikkje vere(negativ) eller større en 100 -> Prøv igjen");
                 } else {
                     break;
                 }

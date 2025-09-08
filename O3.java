@@ -10,13 +10,10 @@ public class O3 {
             int n = sc.nextInt();
 
 
-            while (true){
                 if (n <= 0) {
                     System.out.println("Ugyldig tall");
-                } else {
-                    break;
                 }
-            }
+
                 if (n > 0){
                 long fakultet = 1;
                 for (int i = 1; i <= n; i++) {
